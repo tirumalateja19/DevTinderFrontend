@@ -28,26 +28,26 @@ const NavBar = () => {
           </Link>
         </div>
         {user && (
-          <div className="flex-1 justify-center">
-            <ul className="menu menu-horizontal px-1 text-base font-semibold">
-              <li>
-                <Link to="/">Home</Link>
-              </li>
-              <li>
-                <Link to="/profile">Profile</Link>
-              </li>
-              <li>
-                <Link to="/connections">Connections</Link>
-              </li>
-              <li>
-                <Link to="/requests">Requests</Link>
-              </li>
-              <li>
-                <button onClick={handleLogout}>Logout</button>
-              </li>
-            </ul>
-          </div>
-        )}
+  <div className="hidden lg:flex flex-1 justify-center">
+    <ul className="menu menu-horizontal px-1 text-base font-semibold">
+      <li>
+        <Link to="/">Home</Link>
+      </li>
+      <li>
+        <Link to="/profile">Profile</Link>
+      </li>
+      <li>
+        <Link to="/connections">Connections</Link>
+      </li>
+      <li>
+        <Link to="/requests">Requests</Link>
+      </li>
+      <li>
+        <button onClick={handleLogout}>Logout</button>
+      </li>
+    </ul>
+  </div>
+)}
 
         {user && (
           <div className="flex items-center gap-4">
