@@ -21,41 +21,40 @@ const NavBar = () => {
 
   return (
     <div>
-      <div className="navbar bg-base-300 shadow-sm py-3">
-        <div className="flex-1">
+      <div className="navbar bg-base-300 shadow-sm py-3 px-2">
+        <div>
           <Link to="/" className="btn btn-ghost text-xl capitalize">
             👨🏻‍💻 DevTinder
           </Link>
         </div>
         {user && (
-  <div className="hidden lg:flex flex-1 justify-center">
-    <ul className="menu menu-horizontal px-1 text-base font-semibold">
-      <li>
-        <Link to="/">Home</Link>
-      </li>
-      <li>
-        <Link to="/profile">Profile</Link>
-      </li>
-      <li>
-        <Link to="/connections">Connections</Link>
-      </li>
-      <li>
-        <Link to="/requests">Requests</Link>
-      </li>
-      <li>
-        <button onClick={handleLogout}>Logout</button>
-      </li>
-    </ul>
-  </div>
-)}
-
+          <div className="hidden lg:flex flex-1 justify-center">
+            <ul className="menu menu-horizontal px-1 text-base font-semibold">
+              <li>
+                <Link to="/">Home</Link>
+              </li>
+              <li>
+                <Link to="/profile">Profile</Link>
+              </li>
+              <li>
+                <Link to="/connections">Connections</Link>
+              </li>
+              <li>
+                <Link to="/requests">Requests</Link>
+              </li>
+              <li>
+                <button onClick={handleLogout}>Logout</button>
+              </li>
+            </ul>
+          </div>
+        )}
         {user && (
-          <div className="flex items-center gap-4">
-            <h5 className="capitalize font-semibold">
+          <div className="ml-auto flex items-center gap-2 min-w-0">
+            <h5 className="capitalize font-semibold text-sm md:text-base whitespace-nowrap">
               Welcome {user?.firstName}
             </h5>
 
-            <div className="dropdown dropdown-end mx-4">
+            <div className="dropdown dropdown-end">
               <div
                 tabIndex={0}
                 role="button"
@@ -67,8 +66,8 @@ const NavBar = () => {
               </div>
 
               <ul
-                tabIndex={-1}
-                className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
+                tabIndex={0}
+                className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
               >
                 <li>
                   <Link to="/profile" className="justify-between">
