@@ -29,7 +29,7 @@ const NavBar = () => {
         </div>
         {user && (
           <div className="flex-1 justify-center">
-            <ul className="menu menu-horizontal px-1">
+            <ul className="menu menu-horizontal px-1 text-base font-semibold">
               <li>
                 <Link to="/">Home</Link>
               </li>
